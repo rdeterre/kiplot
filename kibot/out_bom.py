@@ -355,7 +355,7 @@ class BoMOptions(BaseOptions):
                         self.join.append(col.join)
                 # Check this is a valid column
                 if new_col.lower() not in valid_columns_l:
-                    raise KiPlotConfigurationError('Invalid column name `{}`'.format(new_col))
+                    raise KiPlotConfigurationError('Invalid column name `{}`. Valid columns are {}'.format(new_col, valid_columns_l))
                 columns.append(new_col)
             # This is the ordered list with the case style defined by the user
             self.columns = columns
